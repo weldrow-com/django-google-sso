@@ -104,16 +104,16 @@ class UserHelper:
         self.check_first_super_user(user, user_model)
         if created or conf.GOOGLE_SSO_ALWAYS_UPDATE_USER_DATA:
             self.check_for_permissions(user)
-            user.first_name = self.user_info["given_name"]
-            user.last_name = self.user_info["family_name"]
+            user.first_name = self.user_info.get("given_name")
+            user.last_name = self.user_info.get("family_name")
             user.username = self.user_email
             user.set_unusable_password()
         user.save()
 
         google_user, created = GoogleSSOUser.objects.get_or_create(user=user)
         google_user.google_id = self.user_info["id"]
-        google_user.picture_url = self.user_info["picture"]
-        google_user.locale = self.user_info["locale"]
+        google_user.picture_url = self.user_info.get("picture")
+        google_user.locale = self.user_info.get("locale") or conf.GOOGLE_SSO_DEFAULT_LOCALE
         google_user.save()
 
         return user

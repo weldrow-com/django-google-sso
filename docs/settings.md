@@ -1,15 +1,16 @@
 # All Django Settings options
 
 | Setting                                  | Description                                                                                                                                                                        |
-|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `GOOGLE_SSO_ALLOWABLE_DOMAINS`           | List of domains that will be allowed to create users. Default: `[]`                                                                                                                |
 | `GOOGLE_SSO_ALWAYS_UPDATE_USER_DATA`     | If true, update default user info from Google data at every login. This will also make their password unusable. Otherwise, all of this happens only on create. Default: `False`    |
-| `GOOGLE_SSO_AUTHENTICATION_BACKEND`      | The authentication backend to use.  Default: `None`                                                                                                                                |
+| `GOOGLE_SSO_AUTHENTICATION_BACKEND`      | The authentication backend to use. Default: `None`                                                                                                                                 |
 | `GOOGLE_SSO_AUTO_CREATE_FIRST_SUPERUSER` | If True, the first user that logs in will be created as superuser if no superuser exists in the database at all. Default: `False`                                                  |
 | `GOOGLE_SSO_AUTO_CREATE_USERS`           | Enable or disable the auto-create users feature. Default: `True`                                                                                                                   |
 | `GOOGLE_SSO_CALLBACK_DOMAIN`             | The netloc to be used on Callback URI. Default: `None`                                                                                                                             |
 | `GOOGLE_SSO_CLIENT_ID`                   | The Google OAuth 2.0 Web Application Client ID. Default: `None`                                                                                                                    |
 | `GOOGLE_SSO_CLIENT_SECRET`               | The Google OAuth 2.0 Web Application Client Secret. Default: `None`                                                                                                                |
+| `GOOGLE_SSO_DEFAULT_LOCALE`              | Default code for Google locale. Default: `en`                                                                                                                                      |
 | `GOOGLE_SSO_ENABLED`                     | Enable or disable the plugin. Default: `True`                                                                                                                                      |
 | `GOOGLE_SSO_LOGIN_FAILED_URL`            | The named url path that the user will be redirected to if an authentication error is encountered. Default: `admin:index`                                                           |
 | `GOOGLE_SSO_LOGO_URL`                    | The URL of the logo to be used on the login button. Default: `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png` |
